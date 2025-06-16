@@ -11,21 +11,28 @@
 <body>
     <!--The navigation bar-->
 
-    <nav class="container d-flex flex-wrap justify-content-between align-items-center py-3">
+    <nav class="container position-relative d-flex flex-wrap justify-content-between align-items-center py-3">
         <!--Logo-->
         <div class="d-flex align-items-center col-auto">
             <img class="logo img-fluid" src="./Images/AfricaElevators-logo.png" alt="AfricaElevators logo">
         </div>
         <!--Menu Icon(Mobile only)-->
         <div class="d-flex justify-content-end d-md-none col-auto ms-auto">
-            <img class="menu-bar" src="./Images/icons8-menu-50.png" alt="menu-bar">
+            <img class="menu-bar" id="menu-toggle" src="./Images/icons8-menu-50.png" alt="menu-bar">
+        </div>
+        <!--Navigation for the mobile-->
+        <div id="mobile-nav" class="position-absolute top-0 start-50 bg-white shadow z-3 d-none d-md-flex flex-row gap-2 mt-3 w-100 md-none" style="height:100vh;">        <a href="#" class="text-muted text-decoration-none mx-2 text-dark">Home</a>
+            <a href="#services" class="text-muted text-decoration-none text-dark">Services</a>
+            <a href="#inspection-process" class="text-muted text-decoration-none mx-2 text-dark">Inspection Process</a>
+            <a href="#why-choose-us" class="text-muted text-decoration-none mx-2 text-dark">Why Choose Us</a>
+            <a href="#contact-us" class="text-muted text-decoration-none mx-2 text-dark">Contact Us</a>
         </div>
         <div class="d-none d-md-flex col-auto gap-3 mx-3">
-            <a href="#" class="text-decoration-none mx-2 text-dark">Home</a>
-            <a href="#services" class="text-decoration-none mx-2 text-dark">Services</a>
-            <a href="#inspection-process" class="text-decoration-none mx-2 text-dark">Inspection Process</a>
-            <a href="#why-choose-us" class="text-decoration-none mx-2 text-dark">Why Choose Us</a>
-            <a href="#contact-us" class="text-decoration-none mx-2 text-dark">Contact Us</a>
+            <a href="#" class="text-muted text-decoration-none mx-2 text-dark">Home</a>
+            <a href="#services" class="text-muted text-decoration-none text-dark">Services</a>
+            <a href="#inspection-process" class="text-muted text-decoration-none mx-2 text-dark">Inspection Process</a>
+            <a href="#why-choose-us" class="text-muted text-decoration-none mx-2 text-dark">Why Choose Us</a>
+            <a href="#contact-us" class="text-muted text-decoration-none mx-2 text-dark">Contact Us</a>
         </div>
         <div class="d-none d-md-block col-auto">
             <button class="border-0 px-4 py-3 rounded-5">Get an Elevator Inspection</button>
@@ -40,7 +47,7 @@
             <div class="col-12 col-md-6 mb-4 mb-md-0 text-center">
                 <h6 class="mb-2"><img src="./Images/icons8-dash-24.png" alt="dash icon">SINCE 2020</h6>
                 <h1 class="mb-3">AfricaElevators: <span>Your Partner in Elevator Compliance & Reliability.</span></h1>
-                <p class="mb-4">Ensure the safety, compliance, and peak performance of your elevators with our expert
+                <p class="mb-4 text-muted">Ensure the safety, compliance, and peak performance of your elevators with our expert
                     inspection service. Whether you're managing a commercial building, resident complex, or industrial
                     facility, we deliver clear, actionable reports that help you stay ahead of regulations and avoid costly downtime
                     from our routine assessments.
@@ -51,7 +58,7 @@
             </div>
             <!--Image section-->
             <div class="header-img col-12 col-md-6">
-                <img class="w-100 rounded-3 mb-3" src="./Images/Elevator-Inspection.jpg" alt="A technician working on an elevator">
+                <img class="w-100 rounded-3 mb-3" src="./Images/header.jpg" alt="A technician working on an elevator">
             </div>
         </div>
     </header>
@@ -68,7 +75,7 @@
                 </p>
             </div>
             <div class="col-12 col-md-6 order-2 order-md-1">
-                <img class="w-100 img-fluid rounded-3" src="./Images/elevator-inspection2.jpg" alt="technician working on an elevator">
+                <img class="w-100 img-fluid rounded-3" src="./Images/header-image.jpg" alt="technician working on an elevator">
             </div>
         </div>
         <div class="row g-4">
@@ -127,14 +134,14 @@
                     <p>What We Check, How We Check It, and What It Means For Your Elevator</p>
                 </div>
             </div>
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="inspection-process-card d-flex flex-column h-100 rounded-4">
-                        <img class="img-fluid w-100 object-fit-cover rounded-top-4" src="./Images/pre-inspection.jpg" alt="a technician doing pre-installation coordination">
+                        <img class="card-img-top img-fluid w-100 object-fit-cover rounded-4" src="./Images/pre-inspection.jpg" alt="a technician doing pre-installation coordination">
                         <div class="card-body p-4 d-flex flex-column gap-4 flex-grow-1">
                             <span>Step 1</span>
                             <h1 class="card-title">Pre-Inspection Coordination</h1>
-                            <p class="card-text">
+                            <p class="card-text text-muted">
                                 We begin by confirming the appointment time and securing access to all relevant areas. If available,
                                 we review maintenance logs, past inspection reports, and any unresolved violations. This helps us focus
                                 the inspection on historical issues and known risk factors.
@@ -143,25 +150,25 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="inspection-process-card d-flex flex-column h-100 rounded-4">
+                    <div class="inspection-process-card d-flex flex-column h-100 rounded-top-4">
                         <div class="card-body p-4 d-flex flex-column gap-4 flex-grow-1">
                             <span>Step 2</span>
                             <h1 class="card-title">Initial Safety Check</h1>
-                            <p class="card-text">We inspect the machine room for cleanliness, secure access, ventilation, and electrical safety. Fire recall
+                            <p class="card-text text-muted">We inspect the machine room for cleanliness, secure access, ventilation, and electrical safety. Fire recall
                                 systems and basic emergeny protocols are verified to ensure a safe starting point for the 
                                 rest of the evaluation.
                             </p>
                         </div>
-                        <img class="img-fluid object-fit-cover w-100 rounded-top-4"src="./Images/initial-safety-check.jpeg" alt="elevator safety check">
+                        <img class="card-img-bottom img-fluid object-fit-cover w-100 rounded-4"src="./Images/initial-safety-check.jpeg" alt="elevator safety check">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="inspection-process-card d-flex flex-column h-100 rounded-4">
-                        <img class="img-fluid w-100 object-fit-cover rounded-top-4" src="./Images/mechanical-electrical-check.jpg" alt="technician working on mechanical and electrical system">
+                        <img class="card-image-top img-fluid w-100 object-fit-cover rounded-4" src="./Images/mechanical-electrical-check.jpg" alt="technician working on mechanical and electrical system">
                         <div class="card-body p-4 d-flex flex-column gap-4 flex-grow-1">
                             <span>Step 3</span>
                             <h1 class="card-title">Mechanical & Electrical System Evaluation</h1>
-                            <p class="card-text">We assess the core components - motors, relays, controllers, wiring, and hydraulic or traction systems.
+                            <p class="card-text text-muted">We assess the core components - motors, relays, controllers, wiring, and hydraulic or traction systems.
                                 This includes checking for excessive wear, electrical hazards, and mechanical failures that may impact reliability
                                 or efficiency.
                             </p>
@@ -173,21 +180,21 @@
                         <div class="card-body p-4 d-flex flex-column gap-4 flex-grow-1">
                             <span>Step 4</span>
                             <h1 class="card-title">Cab & Shaft Inspection</h1>
-                            <p class="card-text">Inside the elevator cab, we evaluate lighting, ventilation, mirrors, handrails, and ADA compliance.
-                                We then examine the hoistawy, rails, pit, and top of the cab(when accessible) to identify any structurak damage, debris, or oil
+                            <p class="card-text text-muted">Inside the elevator cab, we evaluate lighting, ventilation, mirrors, handrails, and ADA compliance.
+                                We then examine the hoistawy, rails, pit, and top of the cab(when accessible) to identify any structural damage, debris, or oil
                                 contamination.
                             </p>
                         </div>
-                        <img class="img-fluid w-100 object-fit-cover rounded-top-4" src="./Images/shaft-inspection.jpeg" alt="shaft elevator inspection">
+                        <img class="card-img-bottom img-fluid w-100 object-fit-cover rounded-4" src="./Images/shaft-inspection.jpeg" alt="shaft elevator inspection">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="inspection-process-card d-flex flex-column h-100">
-                        <img class="img-fluid w-100 object-fit-cover rounded-top-4"src="./Images/Door and interlocks inspection.jpeg" alt="a technician inspecting elevators doors and interlocks">
+                    <div class="inspection-process-card d-flex flex-column h-100 rounded-4">
+                        <img class="card-img-top img-fluid w-100 object-fit-cover rounded-4" src="./Images/Door and interlocks inspection.jpeg" alt="a technician inspecting elevators doors and interlocks">
                         <div class="card-body p-4 d-flex flex-column gap-4 flex-grow-1">
                             <span>Step 5</span>
                             <h1 class="card-title">Door Operations & Interlocks</h1>
-                            <p class="card-text">Door sensors, reopening devices, and interlocks are tested for timing, responsiveness, and safe operation.
+                            <p class="card-text text-muted">Door sensors, reopening devices, and interlocks are tested for timing, responsiveness, and safe operation.
                                 Since door malfunctions are a common safety issue, we ensure that all door systems function smoothly and securely.
                             </p>
                         </div>
@@ -198,20 +205,20 @@
                         <div class="card-body p-4 d-flex flex-column gap-4 flex-grow-1">
                             <span>Step 6</span>
                             <h1 class="card-title">Ride Quality & Emergency Testing</h1>
-                            <p class="card-text">We take a ride in the elevator to observe leveling, speedd, vibration, and noise. Emergency systems such as the stop button, alarm bel, and communication
+                            <p class="card-text text-muted">We take a ride in the elevator to observe leveling, speedd, vibration, and noise. Emergency systems such as the stop button, alarm bel, and communication
                                 phone or intercom are tested to confirm they meet code and safety requirements.
                             </p>
                         </div>
-                        <img class="img-fluid w-100 object-fit-cover rounded-top-4" src="./Images/Ride-Quality inspection.jpg" alt="RideQuality and Emergency Testing">
+                        <img class="card-img-bottom img-fluid w-100 object-fit-cover rounded-4" src="./Images/Ride-Quality inspection.jpg" alt="RideQuality and Emergency Testing">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="inspection-process-card  d-flex flex-column h-100 rounded-4">
-                        <img class="img-fluid w-100 object-fit-cover rounded-top-4" src="./Images/compliance-check.jpg" alt="compliance check">
+                        <img class="card-img-top img-fluid w-100 object-fit-cover rounded-4" src="./Images/compliance-check.jpg" alt="compliance check">
                         <div class="card-body p-4 d-flex flex-column gap-4 flex-grow-1">
                             <span>Step 7</span>
                             <h1 class="card-title">Compliance Check</h1>
-                            <p class="card-text">We verify the elevator's condition against local and national safety codes. We also check that inspecction certificates are current and that any previous
+                            <p class="card-text text-muted">We verify the elevator's condition against local and national safety codes. We also check that inspecction certificates are current and that any previous
                                 violations have been addressed or resolved.
                             </p>
                         </div>
@@ -219,15 +226,15 @@
                 </div>
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="inspection-process-card  d-flex flex-column h-100 rounded-4">
-                        <div class="card-body p-4 d-flex flex-column gap-4">
+                        <div class="card-body p-4 d-flex flex-column gap-4 flex-grow-1">
                             <span>Step 8</span>
                             <h1 class="card-title">Reporting & Recommendations</h1>
-                            <p class="card-text">You'll receive a clear, written inspection report within 24-48 hours. It incudes detailed
+                            <p class="card-text text-muted">You'll receive a clear, written inspection report within 24-48 hours. It incudes detailed
                                 findings, code references, and photos where applicable. We also provide actionable Recommendations
                                 and cost estimates for any necessary repairs of re-inspectons.
                             </p>
                         </div>
-                        <img class="img-fluid w-100 object-fit-cover" src="./Images/Reporting&Recommendations.jpeg" alt="reporting on recommedations">
+                        <img class="card-img-bottom img-fluid w-100 object-fit-cover rounded-4" src="./Images/Reporting&Recommendations.jpeg" alt="reporting on recommedations">
                     </div>
                 </div>
             </div>
@@ -246,7 +253,7 @@
                 <div class="text-center h-100 p-3 border rounded">
                     <img src="./Images/icons8-check-50.png" alt="check icon">
                     <h3 class="m-4">Certified & Experienced Inspectors</h3>
-                    <p>Our team is fully licensed, professionally trained, and up-to-date with the latest
+                    <p class="text-muted">Our team is fully licensed, professionally trained, and up-to-date with the latest
                         safety codes and inspectio standards.
                     </p>
                 </div>
@@ -255,7 +262,7 @@
                 <div class="text-center h-100 p-3 border rounded">
                     <img src="./Images/icons8-check-50.png" alt="check icon">
                     <h3 class="m-4">Fast Turnaround Times</h3>
-                    <p>We deliver detailed inspection reports within 24-48 hours, so you can take action quickly
+                    <p class="text-muted">We deliver detailed inspection reports within 24-48 hours, so you can take action quickly
                         and stay ahead of deadlines.
                     </p>
                 </div>
@@ -264,7 +271,7 @@
                 <div class="text-center h-100 p-3 border rounded">
                     <img src="./Images/icons8-check-50.png" alt="check icon">
                     <h3 class="m-4">All Elevator Types & Property Sizes</h3>
-                    <p>From tresidential buildings to high-rise commercial complexes, we inspect hydraulic, traction, MRL,
+                    <p class="text-muted">From tresidential buildings to high-rise commercial complexes, we inspect hydraulic, traction, MRL,
                         and freight elevators with precision.
                     </p>
                 </div>
@@ -273,7 +280,7 @@
                 <div class="text-center h-100 p-3 border rounded">
                     <img src="./Images/icons8-check-50.png" alt="check icon">
                     <h3 class="m-4">Clear Communication & Support</h3>
-                    <p>No technical jargon. Just straightforward reporting, honest recommendations, and full transparency
+                    <p class="text-muted">No technical jargon. Just straightforward reporting, honest recommendations, and full transparency
                         every step of the way.
                     </p>
                 </div>
@@ -292,8 +299,8 @@
                         <img src="./Images/icons8-quotes-48.png" alt="quotes icon">
                     </div>
                     <div>
-                        <p>AfricaElevators made the inspection process smooth and stress-free. They were prompt, professional, and explained
-                            everything in detail.Highly recommended!
+                        <p class="text-muted">AfricaElevators made the inspection process smooth and stress-free. They were prompt, professional, and explained
+                            everything in detail. Highly recommended!
                         </p>
                         <p style="color: #2c5282"><strong><i>James K., Property Manager - Nairobi</i></strong></p>
                     </div>
@@ -305,7 +312,7 @@
                         <img src="./Images/icons8-quotes-48.png" alt="quotes icon">
                     </div>
                     <div>
-                        <p>Their team helped us tresolve a long-standing violation quickly. The report was thorough, and they even
+                        <p class="text-muted">Their team helped us to resolve a long-standing violation quickly. The report was thorough, and they even
                         guided us through the compliance process. Truly impressive service.
                         </p>
                         <p style="color: #2c5282"><strong><i>Fatima A., Commercial Building Owner - Mombasa</i></strong></p>
@@ -318,7 +325,7 @@
                         <img src="./Images/icons8-quotes-48.png" alt="quotes icon">
                     </div>
                     <div>
-                        <p>We needed multiple elevators inspected before handover. AfricaElevators delivered timely. accurate reports and
+                        <p class="text-muted">We needed multiple elevators inspected before handover. AfricaElevators delivered timely. accurate reports and
                         spotted issues our contractor missed. Will work with them again.
                         </p>
                         <p style="color: #2c5282"><strong><i>David M., Construction Project Lead - Kisumu</i></strong></p>
@@ -334,7 +341,7 @@
         <div class="row gy-4 align-items-center">
             <div class="col-12 col-lg-6">
                 <h1 class="text-center px-md-5">Contact AfricaElevators Inspection Today</h1>
-                <p class="text-center">
+                <p class="text-center text-muted">
                     Every day, your elevator carries more than just passengers - it carries responsibility. As a critical
                     part of your building's infrastructure, Its safety and reliability can't be overlooked. Our comperehensive
                     inspection services ensure your lifts meet all regulatory standards, operate smoothly, and protect everyone
@@ -351,36 +358,36 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <form>
+                <form method="post">
                     <fieldset class="fieldset border p-4 rounded shadow-sm">
                         <legend class="text-center mb-3 fs-5 fw-bold" style="color:#2c5282">Get A Professional Elevator Inspection</legend>
                         <div class="row g-3 mb-3">
                             <div class="form-floating col-12 col-md-6">
-                                <input type="text" class="form-control custom-focus" id="floatingFirstName" placeholder="First Name">
+                                <input type="text" class="form-control custom-focus" name="first name" id="floatingFirstName" placeholder="First Name" required>
                                 <label class="px-4" for="floatingFirstName">First Name</label>
                             </div>
                             <div class="form-floating col-12 col-md-6">
-                                <input type="text" class="form-control custom-focus" id="floatingLastName" placeholder="Last Name">
+                                <input type="text" class="form-control custom-focus" name="last name" id="floatingLastName" placeholder="Last Name" required>
                                 <label class="px-4" for="floatingLastName">Last Name</label>
                             </div>
                             <div class="form-floating col-12 col-md-6">
-                                <input type="email" class="form-control custom-focus" id="floatingEmail" placeholder="Email Address">
+                                <input type="email" class="form-control custom-focus" name="email" id="floatingEmail" placeholder="Email Address" required>
                                 <label class="px-4" for="floatingEmail">Email Address</label>
                             </div>
                             <div class="form-floating col-12 col-md-6">
-                                <input type="text" class="form-control custom-focus" id="floatingNumber" placeholder="Phone">
+                                <input type="text" class="form-control custom-focus" name="phone number" id="floatingNumber" placeholder="Phone" required>
                                 <label class="px-4" for="floatingNumber">Phone</label>
                             </div>
                             <div class="form-floating col-12 col-md-6">
-                                <input type="text" class="form-control custom-focus" id="floatingStreet" placeholder="Street">
+                                <input type="text" class="form-control custom-focus" name="street" id="floatingStreet" placeholder="Street" required>
                                 <label class="px-4" for="floatingStreet">Street</label>
                             </div>
                             <div class="form-floating col-12 col-md-3">
-                                <input type="text" class="form-control custom-focus" id="floatingCity" placeholder="City">
+                                <input type="text" class="form-control custom-focus" name="city" id="floatingCity" placeholder="City" required>
                                 <label class="px-4" for="floatingCity">City</label>
                             </div>
                             <div class="form-floating col-12 col-md-3">
-                                <input type="text" class="form-control custom-focus" id="floatingPostalCode" placeholder="Zip/Postal Code">
+                                <input type="text" class="form-control custom-focus" id="floatingPostalCode"name="postal code" placeholder="Zip/Postal Code" required>
                                 <label class="px-4" for="floatingPostalCode">Postal Code</label>
                             </div>
                         </div>
@@ -450,5 +457,13 @@
             </div>
         </div>
     </footer>
+    <script>
+        const toggleButton = document.getElementById("menu-toggle");
+        const mobileNav = document.getElementById("mobile-nav");
+
+        toggleButton.addEventListener('click', () => {
+            mobileNav.classList.toggle('d-none')
+        })
+    </script>
 </body>
 </html>
